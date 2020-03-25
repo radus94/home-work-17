@@ -14,7 +14,7 @@ function getQuadratic (delta, a, b) {
   } else if (delta > 0) {
     var x1 = (-b + Math.sqrt(delta)) / (2 * a)
     var x2 = (-b - Math.sqrt(delta)) / (2 * a)
-    return 'X1: ' + x1 + ';<br>X2: ' + x2
+    return 'X1: ' + x1 + '; X2: ' + x2
   } else if (delta < 0) {
     return 'No data'
   }
@@ -22,3 +22,9 @@ function getQuadratic (delta, a, b) {
 
 document.write(getDiscriminant(a, b, c))
 document.write(getQuadratic(getDiscriminant(a, b, c), a, b))
+
+
+module.exports = {
+    getDiscriminant,
+    getQuadratic
+}
